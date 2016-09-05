@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="please_enter_your_name">Please enter your name:</string>
+    <string name="start">START</string>
+    <string name="bla">bla</string>
+    <string name="ximages">ximages</string>
+    <string name="enter_your_name_here">Enter your name here</string>
+    <string name="name">Name</string>
+    <string name="score">Score</string>
+    <string name="wins">Wins</string>
+    <string name="android">Android</string>
+    <string name="game_score"> : </string>
+    <string name="contender">Contender</string>
+    <string name="lt_your_name">Your Name</string>
+    <string name="reset_score">Reset Score</string>
+    <string name="save">save</string>
+</resources>
