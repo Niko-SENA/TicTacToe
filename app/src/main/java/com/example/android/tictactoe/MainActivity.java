@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     public void startButtonClick (View v) {
 
         //Toast.makeText(this, "You clicked the Button", Toast.LENGTH_LONG).show();
-        startActivity(new Intent(MainActivity.this, Main4Activity.class));
+        startActivity(new Intent(MainActivity.this, MainActivity_7by7.class));
 
     }
 
