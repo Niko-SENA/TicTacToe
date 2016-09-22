@@ -13,7 +13,7 @@ import java.util.Random;
 public class MainActivity_7by7 extends AppCompatActivity {
 
     static int boardSize = 7;
-    static char[] mainBoard = new char[boardSize*boardSize];
+    static char[][] mainBoard = new char[boardSize][boardSize];
     List<Integer> list = new ArrayList<>(boardSize*boardSize);
 
 
@@ -23,15 +23,24 @@ public class MainActivity_7by7 extends AppCompatActivity {
         setContentView(R.layout.activity_main_activity_7by7);
 
         for (int i = 0; i < boardSize*boardSize; i++) {
-            mainBoard[i] = '*';
+            //mainBoard[i] = '*';
             list.add(i);
+        }
+
+        for (int i = 0; i < boardSize; i++){
+            for (int j = 0; i < boardSize; j++){
+                mainBoard[i][j] = '*';
+            }
         }
 
     }
 
     public void clickedX(View v){
 
-        mainBoard[(v.getId()-R.id.imageViewX00)] = 'X';
+        int iIndex = (v.getId()-R.id.imageViewX00)/boardSize;
+        int jIndex = (v.getId()-R.id.imageViewX00)%boardSize;
+
+        mainBoard[iIndex][jIndex] = 'X';
 
         ImageView xvisibility = (ImageView) findViewById(v.getId());
         xvisibility.setImageResource(R.drawable.ximage);
@@ -65,7 +74,7 @@ public class MainActivity_7by7 extends AppCompatActivity {
         int rndIndexInList = rand.nextInt(list.size());
         int temp = list.remove(rndIndexInList);
 
-        mainBoard[temp] = 'O';
+        mainBoard[temp/boardSize][temp%boardSize] = 'O';
 
         ImageView ovisibility = (ImageView) findViewById(temp+R.id.imageViewX00);
         ovisibility.setImageResource(R.drawable.oimage);
@@ -84,6 +93,8 @@ public class MainActivity_7by7 extends AppCompatActivity {
     }
 
     public boolean checkWin (char who){
+        return true;
+        /*
         return (mainBoard[0] == who) && (mainBoard[1] == who) && (mainBoard[2] == who) ||
                 (mainBoard[3] == who) && (mainBoard[4] == who) && (mainBoard[5] == who) ||
                 (mainBoard[6] == who) && (mainBoard[7] == who) && (mainBoard[8] == who) ||
@@ -92,6 +103,7 @@ public class MainActivity_7by7 extends AppCompatActivity {
                 (mainBoard[2] == who) && (mainBoard[5] == who) && (mainBoard[8] == who) ||
                 (mainBoard[0] == who) && (mainBoard[4] == who) && (mainBoard[8] == who) ||
                 (mainBoard[2] == who) && (mainBoard[4] == who) && (mainBoard[6] == who);
+        */
     }
 
 

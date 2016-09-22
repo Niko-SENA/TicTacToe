@@ -20,7 +20,8 @@
         android:layout_alignParentEnd="false"
         android:layout_alignParentLeft="false"
         android:layout_alignParentStart="false"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:id="@+id/gridLayout">
 
         <ImageView
             android:layout_width="46dp"
