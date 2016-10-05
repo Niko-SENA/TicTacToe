@@ -49,7 +49,6 @@ public class Main4Activity extends AppCompatActivity {
         if (checkWin('X')){
             Toast.makeText(this, "**********\n"+"*YOU WIN*\n"+"**********", Toast.LENGTH_LONG).show();
             MainActivity.playerScore ++;
-
             MainActivity.gameScore.setText(MainActivity.playerScore+" : "+MainActivity.androidScore);
             finish();
             return;

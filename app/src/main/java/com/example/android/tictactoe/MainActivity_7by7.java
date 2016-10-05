@@ -14,7 +14,7 @@ public class MainActivity_7by7 extends AppCompatActivity {
 
     static int boardSize = 7;
     static char[][] mainBoard = new char[boardSize][boardSize];
-    List<Integer> list = new ArrayList<>(boardSize*boardSize);
+    List<Integer> list = new ArrayList<>(boardSize*boardSize); // need this for the random Android play
 
 
     @Override
@@ -23,7 +23,6 @@ public class MainActivity_7by7 extends AppCompatActivity {
         setContentView(R.layout.activity_main_activity_7by7);
 
         for (int i = 0; i < boardSize*boardSize; i++) {
-            //mainBoard[i] = '*';
             list.add(i);
         }
 
